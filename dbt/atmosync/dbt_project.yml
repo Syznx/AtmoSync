@@ -1,0 +1,14 @@
+name: 'atmosync'
+version: '1.0.0'
+
+profile: 'atmosync'
+models:
+  atmosync:
+    staging:
+      +materialized: view
+
+    intermediate:
+      +materialized: table
+
+    marts:
+      +materialized: table  

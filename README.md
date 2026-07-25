@@ -268,3 +268,14 @@ python IoTSimulator.py
 ```
 
 You will see live output like this:
+[2026-07-09T...] A42 | Avocado | Temp: 18.5°C | Humidity: 91.2% | Spoilage: 32.5% | ₹44.88/kg | 🔴 REROUTE
+[2026-07-09T...] B17 | Mango | Temp: 13.0°C | Humidity: 87.3% | Spoilage: 0.0% | ₹51.00/kg | 🟢 OK
+
+### Step 5 — Run Kafka to SQLite Consumer
+Open a new terminal and run:
+```bash
+cd storage
+python kafka_to_sqlite.py
+```
+
+Data will start flowing into `storage/atmosync.db` in real time.

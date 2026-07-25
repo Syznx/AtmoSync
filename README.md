@@ -78,3 +78,53 @@ I --> J[Apache Superset]
 
 J --> K[📊 Interactive Dashboard]
 ```
+
+---
+
+# 📂 Repository Structure
+
+```text
+AtmoSync/
+│
+├── dbt/
+│   └── atmosync/
+│       ├── models/
+│       │   ├── staging/
+│       │   ├── intermediate/
+│       │   └── marts/
+│       ├── seeds/
+│       ├── macros/
+│       ├── snapshots/
+│       ├── tests/
+│       ├── dbt_project.yml
+│       └── packages.yml
+│
+├── docs/
+│   ├── README.md
+│   ├── screenshots/
+│   └── dashboard_export/
+│
+├── images/
+│
+├── kafka/
+│   ├── kafka_consumer.py
+│   ├── kafka_producer.py
+│   └── iot_simulator.py
+│
+├── scripts/
+│   └── migrate_sqlite_to_duckdb.py
+│
+├── storage/
+│   ├── kafka_to_sqlite.py
+│   ├── atmosync.db
+│   └── atmosync.duckdb
+│
+├── superset/
+│
+├── .gitignore
+├── docker-compose.yml
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
+

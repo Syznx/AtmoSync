@@ -200,3 +200,41 @@ Apache Superset connects directly to the transformed DuckDB models to provide in
 - Commodity Market Insights
 
 The dashboard updates whenever new telemetry is processed through the pipeline.
+
+## Installation
+
+### Prerequisites
+Make sure the following are installed on your system before proceeding:
+
+- Python 3.10+
+- Apache Kafka 3.7+
+- Java 17+ (required for Kafka)
+- Docker Desktop
+- Git
+
+### Clone the Repository
+```bash
+git clone https://github.com/Syznx/AtmoSync.git
+cd AtmoSync
+```
+
+### Install Python Dependencies
+```bash
+pip install kafka-python
+pip install google-cloud-bigquery
+pip install psycopg2-binary
+```
+
+### Kafka Setup
+1. Download Apache Kafka from https://kafka.apache.org/downloads
+2. Extract to `C:\kafka\`
+3. Add PATH variable:
+```powershell
+$env:PATH += ";C:\Program Files\Java\jdk-17\bin"
+```
+
+### Docker Setup
+Pull and build the custom Superset image:
+```bash
+docker build -t custom-superset .
+```

@@ -279,3 +279,27 @@ python kafka_to_sqlite.py
 ```
 
 Data will start flowing into `storage/atmosync.db` in real time.
+
+## Running Kafka
+
+AtmoSync uses Apache Kafka as the streaming backbone. The pipeline requires
+three components running simultaneously:
+
+| Component | Command | Port |
+|---|---|---|
+| Zookeeper | zookeeper-server-start.bat | 2181 |
+| Kafka Broker | kafka-server-start.bat | 9092 |
+| IoT Simulator | python IoTSimulator.py | — |
+
+To verify Kafka is running correctly, list all topics:
+```bash
+cd C:\kafka
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+```
+
+You should see `container-telemetry` in the output.
+
+To monitor live messages flowing through Kafka:
+```bash
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic container-telemetry --from-beginning
+```

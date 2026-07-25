@@ -219,6 +219,56 @@ Apache Superset connects directly to the transformed DuckDB models to provide in
 
 The dashboard updates whenever new telemetry is processed through the pipeline.
 
+---
+
+# 📸 Project Showcase
+
+## 🖥️ AtmoSync Operations Dashboard
+
+A unified operations dashboard displaying container health, spoilage analytics, temperature trends, live route monitoring, and reroute alerts.
+
+![Operations Dashboard](docs/screenshots/dashboard-overview.png)
+
+---
+
+## 📈 Historical Temperature Trend
+
+Visualizes temperature fluctuations over time to help identify conditions that may lead to spoilage.
+
+![Temperature Trend](docs/screenshots/temperature-trend.png)
+
+---
+
+## 🗺️ Live Container Route Map
+
+Displays the latest container locations on an interactive map for operational monitoring.
+
+![Container Route Map](docs/screenshots/container-route-map.png)
+
+---
+
+## ⚡ Kafka Streaming Pipeline
+
+Real-time IoT telemetry being published to the Kafka topic.
+
+![Kafka Producer](docs/screenshots/kafka-producer.png)
+
+---
+
+## 📥 Kafka Consumer
+
+Kafka consumer continuously ingesting streaming events into the raw data layer.
+
+![Kafka Consumer](docs/screenshots/kafka-consumer.png)
+
+---
+
+## 🔄 dbt ELT Pipeline
+
+Successful execution of dbt models that transform raw telemetry into analytics-ready datasets.
+
+![dbt Run](docs/screenshots/dbt-run.png)
+
 ## Installation
 
 ### Prerequisites

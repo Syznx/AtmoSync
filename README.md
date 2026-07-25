@@ -227,7 +227,7 @@ The dashboard updates whenever new telemetry is processed through the pipeline.
 
 A unified operations dashboard displaying container health, spoilage analytics, temperature trends, live route monitoring, and reroute alerts.
 
-![Operations Dashboard](docs/screenshots/dashboard-overview.png)
+![Dashboard-overview](docs/screenshots/dashboard-overview.png)
 
 ---
 

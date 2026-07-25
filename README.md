@@ -342,3 +342,47 @@ dbt test
 ```
 
 This generates the staging, intermediate, and mart models used by Apache Superset.
+
+## Launching Superset
+
+AtmoSync uses Apache Superset deployed via Docker for dashboard visualization.
+
+### Step 1 — Build Custom Superset Image
+```bash
+docker build -t custom-superset .
+```
+
+### Step 2 — Start Superset Container
+```bash
+docker run -d -p 8088:8088 --name superset \
+  -e "SUPERSET_SECRET_KEY=your_secret_key_here" \
+  custom-superset
+```
+> Replace `your_secret_key_here` with a strong alphanumeric string
+
+### Step 3 — Initialize Superset (first time only)
+```bash
+docker exec -it superset superset fab create-admin \
+  --username your_username \
+  --firstname Admin --lastname User \
+  --email your_email@example.com \
+  --password your_password
+
+docker exec -it superset superset db upgrade
+docker exec -it superset superset init
+```
+
+### Step 4 — Load Database into Container
+```bash
+docker cp storage/atmosync.db superset:/tmp/atmosync.db
+```
+
+### Step 5 — Open Superset
+Go to:http://localhost:8088
+
+Login with the credentials you set in Step 3.
+
+### Step 6 — Connect SQLite Database
+- Go to **Settings → Database Connections → + Database → SQLite**
+- Enter the URI pointing to your loaded database file
+- Click **Test Connection → Connect**

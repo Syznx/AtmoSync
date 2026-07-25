@@ -221,7 +221,6 @@ cd AtmoSync
 ### Install Python Dependencies
 ```bash
 pip install kafka-python
-pip install google-cloud-bigquery
 pip install psycopg2-binary
 ```
 
@@ -238,3 +237,34 @@ Pull and build the custom Superset image:
 ```bash
 docker build -t custom-superset .
 ```
+
+## Running the Simulator
+
+### Step 1 — Start Zookeeper
+Open a terminal and run:
+```bash
+cd C:\kafka
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+```
+
+### Step 2 — Start Kafka Broker
+Open a new terminal and run:
+```bash
+cd C:\kafka
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+```
+
+### Step 3 — Create Kafka Topic
+Open a new terminal and run:
+```bash
+cd C:\kafka
+.\bin\windows\kafka-topics.bat --create --topic container-telemetry --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
+
+### Step 4 — Run IoT Simulator
+```bash
+cd kafka
+python IoTSimulator.py
+```
+
+You will see live output like this:

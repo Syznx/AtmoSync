@@ -49,3 +49,32 @@ This project demonstrates a modern Data Engineering workflow using streaming ing
 | Containerization | Docker |
 | Version Control | Git & GitHub |
 
+---
+
+# 🏗️ System Architecture
+
+The following diagram illustrates the complete end-to-end data pipeline used in AtmoSync.
+
+```mermaid
+flowchart LR
+
+A[📡 IoT Simulator] -->|Real-Time Telemetry| B[Apache Kafka]
+
+B --> C[Kafka Consumer]
+
+C --> D[(SQLite)]
+
+D --> E[DuckDB]
+
+E --> F[dbt Core]
+
+F --> G[Staging Models]
+
+G --> H[Fact Models]
+
+H --> I[Mart Models]
+
+I --> J[Apache Superset]
+
+J --> K[📊 Interactive Dashboard]
+```

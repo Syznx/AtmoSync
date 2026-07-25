@@ -321,3 +321,24 @@ To monitor live messages flowing through Kafka:
 ```bash
 .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic container-telemetry --from-beginning
 ```
+# 🔄 Running dbt
+
+Navigate to the dbt project:
+
+```bash
+cd dbt/atmosync
+```
+
+Run the transformation models:
+
+```bash
+dbt run
+```
+
+Validate the models:
+
+```bash
+dbt test
+```
+
+This generates the staging, intermediate, and mart models used by Apache Superset.

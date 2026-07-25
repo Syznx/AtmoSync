@@ -33,3 +33,19 @@ This project demonstrates a modern Data Engineering workflow using streaming ing
 - 📉 Spoilage prediction analytics
 - 🚚 Reroute recommendation tracking
 - 📍 Live container location visualization
+
+---
+
+# 🛠️ Tech Stack
+
+| Category | Technology |
+|-----------|------------|
+| Language | Python 3.13 |
+| Streaming | Apache Kafka |
+| Database | DuckDB |
+| Data Transformation | dbt Core |
+| Data Modeling | SQL |
+| Dashboard | Apache Superset |
+| Containerization | Docker |
+| Version Control | Git & GitHub |
+

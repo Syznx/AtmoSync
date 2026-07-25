@@ -1,0 +1,16 @@
+commodity,market,price_per_kg
+Avocado,Delhi,180
+Avocado,Mumbai,165
+Avocado,Jaipur,170
+Mango,Mumbai,120
+Mango,Delhi,135
+Mango,Jaipur,128
+Tomato,Delhi,45
+Tomato,Mumbai,42
+Tomato,Jaipur,48
+Grapes,Delhi,160
+Grapes,Mumbai,155
+Grapes,Jaipur,150
+Leafy Greens,Delhi,35
+Leafy Greens,Mumbai,32
+Leafy Greens,Jaipur,38

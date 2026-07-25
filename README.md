@@ -1,3 +1,21 @@
+## 📑 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [System Architecture](#️-system-architecture)
+- [Repository Structure](#-repository-structure)
+- [Data Pipeline Flow](#-data-pipeline-flow)
+- [Screenshots](#-screenshots)
+- [Installation](#-installation)
+- [Running the Simulator](#-running-the-simulator)
+- [Running Kafka](#-running-kafka)
+- [Running dbt](#-running-dbt)
+- [Launching Superset](#-launching-superset)
+- [Dashboard Preview](#-dashboard-preview)
+- [Future Improvements](#-future-improvements)
+- [License](#-license)
+
 # 🌍 AtmoSync – Real-Time Micro-Climate Supply Chain Analytics
 
 > A real-time data engineering and analytics platform that monitors perishable commodity shipments using streaming IoT telemetry, transforms raw events into analytics-ready datasets with dbt, and visualizes live operational insights using Apache Superset.

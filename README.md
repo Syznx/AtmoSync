@@ -460,3 +460,27 @@ The final dashboard provides real-time operational insights, including:
 - Integrate live weather APIs
 - Implement user authentication and role-based dashboards
 - Add real-time anomaly detection
+
+## 📚 Key Learnings
+
+During this project I learned:
+
+- Designing event-driven pipelines
+- Building layered dbt models
+- Working with analytical databases
+- Building BI dashboards
+- Streaming real-time IoT telemetry
+
+  # 👨‍💻 Author
+
+**Harshit Saini**
+
+B.Tech Computer Science Engineering
+
+Government Engineering College, Ajmer
+
+GitHub:
+https://github.com/Syznx
+
+LinkedIn:
+(Add your LinkedIn URL)

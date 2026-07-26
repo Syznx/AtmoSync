@@ -448,3 +448,15 @@ The final dashboard provides real-time operational insights, including:
 - 📈 Historical Temperature Trends
 - 🗺️ Live Container Route Monitoring
 - 🚚 Reroute Alerts
+
+---
+
+# 🚀 Future Improvements
+
+- Deploy the complete pipeline on AWS, Azure, or Google Cloud
+- Replace SQLite with PostgreSQL
+- Automate transformations using Apache Airflow
+- Add machine learning for spoilage prediction
+- Integrate live weather APIs
+- Implement user authentication and role-based dashboards
+- Add real-time anomaly detection

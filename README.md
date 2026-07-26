@@ -436,3 +436,15 @@ Login with the credentials you set in Step 3.
 - Go to **Settings → Database Connections → + Database → SQLite**
 - Enter the URI pointing to your loaded database file
 - Click **Test Connection → Connect**
+
+---
+
+# 🖥️ Dashboard Preview
+
+The final dashboard provides real-time operational insights, including:
+
+- 🟢 Container Health Status
+- 📉 Average Spoilage by Container
+- 📈 Historical Temperature Trends
+- 🗺️ Live Container Route Monitoring
+- 🚚 Reroute Alerts

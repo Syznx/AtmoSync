@@ -248,4 +248,5 @@ waypoint rather than continuing to the original destination.
 | Superset SECRET_KEY error | Passed key as environment variable in docker run command |
 | psycopg2 installed in wrong Python environment | Rebuilt custom Docker image with correct pip path |
 
+**But finally used SQLite for primary DB and DuckDB for futher processing over the data coming from SQLite data layer**
 

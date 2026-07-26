@@ -1,1 +1,22 @@
+# ==========================================
+# AtmoSync - Python Dependencies
+# ==========================================
 
+# Kafka Streaming
+kafka-python>=2.2.15
+
+# Data Processing
+pandas>=2.3.0
+numpy>=2.3.0
+
+# Analytical Database
+duckdb>=1.4.0
+
+# Environment Variables
+python-dotenv>=1.1.0
+
+# HTTP Requests
+requests>=2.32.0
+
+# Date & Time Utilities
+python-dateutil>=2.9.0

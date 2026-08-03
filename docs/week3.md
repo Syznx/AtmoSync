@@ -243,114 +243,107 @@ Current snapshot contains:
 
 # Apache Superset Dashboard
 
-A new operational dashboard was created using the current container snapshot.
+The final dashboard was developed in Apache Superset using the `mart_current_container_status` analytical model.
 
-Dashboard Components:
+The dashboard provides a real-time operational overview of all active shipping containers and enables business users to identify high-risk shipments requiring immediate action.
 
 ---
 
-## 1. At-Risk Containers
+## Dashboard Visualizations
 
-Displays the latest state of every shipping container.
+### 1. At-Risk Containers
 
-Includes:
+**Chart Type:** Table
+
+**Dataset Used:**
+`mart_current_container_status`
+
+**Columns Displayed**
 
 - Container ID
 - Commodity
-- Spoilage %
-- Temperature
-- Arbitrage Score
-- Reroute Priority
+- Current Location
 - Recommended Market
+- Spoilage %
+- Arbitrage Score
+- Recoverable Value
+- Reroute Priority
 
-Purpose:
+**Purpose**
 
-Allows operations managers to quickly identify containers requiring attention.
-
----
-
-## 2. Arbitrage Score by Container
-
-Horizontal bar chart ranking containers according to their Arbitrage Score.
-
-Purpose:
-
-Prioritize operational decisions.
+Provides a live operational snapshot of every active container and highlights shipments requiring immediate intervention.
 
 ---
 
-## 3. Reroute Priority Distribution
+### 2. Arbitrage Score by Container
 
-Bar chart summarizing how many containers belong to each priority category.
+**Chart Type:** Horizontal Bar Chart
 
-Purpose:
+**Dataset Used:**
+`mart_current_container_status`
 
-Provide a fleet-level operational overview.
+**X-Axis**
 
----
+- Arbitrage Score
 
-## 4. Recoverable Value
+**Y-Axis**
 
-Visualizes the remaining estimated financial value of each shipment.
+- Container ID
 
-Purpose:
+**Purpose**
 
-Help determine which shipments still justify intervention.
-
----
-
-# Business Impact
-
-Week 3 transforms raw telemetry into business decisions.
-
-Instead of simply monitoring sensors, the platform now answers:
-
-- Which shipment is at greatest risk?
-- Which shipment should be rerouted first?
-- Which shipment still has recoverable market value?
-- Which shipment can continue its planned route?
+Ranks containers according to overall operational risk, allowing logistics teams to prioritize rerouting decisions.
 
 ---
 
-# Technologies Used
+### 3. Reroute Priority Distribution
 
-| Category | Technology |
-|----------|------------|
-| Programming | Python |
-| Streaming | Apache Kafka |
-| Raw Storage | SQLite |
-| Analytics Warehouse | DuckDB |
-| Data Transformation | dbt Core |
-| Business Intelligence | Apache Superset |
+**Chart Type:** Vertical Bar Chart
 
----
+**Dataset Used:**
+`mart_current_container_status`
 
-# Deliverables
+**X-Axis**
 
-✅ Commodity Pricing Seed
+- Reroute Priority
 
-✅ Market Distance Seed
+**Y-Axis**
 
-✅ dbt Seed Models
+- Number of Containers
 
-✅ Spoilage Arbitrage Model
+**Purpose**
 
-✅ Current Container Status Model
-
-✅ Recoverable Value Calculation
-
-✅ Risk Classification
-
-✅ Arbitrage Score
-
-✅ Reroute Recommendation Logic
-
-✅ Apache Superset Dashboard
+Provides a fleet-wide summary showing how many shipments belong to each operational priority level.
 
 ---
 
-# Week 3 Outcome
+### 4. Recoverable Value by Container
 
-By the end of Week 3, AtmoSync evolved from a real-time monitoring system into a decision-support platform capable of combining IoT telemetry, logistics information, and financial analytics to generate intelligent rerouting recommendations for cold-chain shipments.
+**Chart Type:** Horizontal Bar Chart
 
-This phase established the analytical foundation required for future enhancements such as machine learning-based spoilage prediction, automated alerting, and large-scale cloud deployment.
+**Dataset Used:**
+`mart_current_container_status`
+
+**X-Axis**
+
+- Recoverable Value
+
+**Y-Axis**
+
+- Container ID
+
+**Purpose**
+
+Shows the remaining financial value of every shipment after spoilage, helping determine whether rerouting is economically justified.
+
+---
+
+## Dashboard Outcome
+
+The dashboard combines operational telemetry with financial analytics, enabling logistics managers to:
+
+- Monitor all active containers in real time.
+- Identify containers with high spoilage risk.
+- Prioritize rerouting decisions.
+- Estimate recoverable shipment value.
+- Reduce financial losses by acting before commodities become unsellable.

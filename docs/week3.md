@@ -347,3 +347,17 @@ The dashboard combines operational telemetry with financial analytics, enabling 
 - Prioritize rerouting decisions.
 - Estimate recoverable shipment value.
 - Reduce financial losses by acting before commodities become unsellable.
+
+# Key Business Metrics
+
+| Metric | Description |
+|---------|-------------|
+| Spoilage % | Percentage of commodity already spoiled |
+| Remaining Shelf Life | Remaining usable life of the shipment |
+| Recoverable Value | Estimated remaining market value |
+| Distance (km) | Distance to recommended market |
+| Temperature Risk | Risk level based on container temperature |
+| Distance Risk | Risk level based on travel distance |
+| Spoilage Risk | Risk category based on spoilage percentage |
+| Arbitrage Score | Composite risk score combining spoilage, distance and temperature |
+| Reroute Priority | Operational recommendation generated from the arbitrage score |

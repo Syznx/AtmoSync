@@ -1,0 +1,16 @@
+current_location,recommended_market,distance_km
+Mumbai,Agra,1200
+Mumbai,Delhi,1400
+Pune,Delhi,1450
+Pune,Mumbai,150
+Aurangabad,Aurangabad,0
+Aurangabad,Delhi,1180
+Nagpur,Nagpur,0
+Nagpur,Hyderabad,500
+Delhi,Delhi,0
+Agra,Delhi,230
+Jaipur,Delhi,270
+Ahmedabad,Jaipur,660
+Indore,Delhi,820
+Surat,Mumbai,280
+Nashik,Mumbai,170
